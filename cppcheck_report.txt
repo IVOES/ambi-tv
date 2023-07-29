@@ -1,0 +1,107 @@
+misc/usbtv-driver/usbtv.c:333:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+       int i, pkt_ok = 1;
+           ^
+src/component.c:59:33: style: The scope of the variable 'component' can be reduced. [variableScope]
+   struct ambitv_any_component* component;
+                                ^
+src/components/avg-color-processor.c:58:8: style: The scope of the variable 'i' can be reduced. [variableScope]
+   int i, n_out, ret = 0;
+       ^
+src/components/avg-color-processor.c:58:11: style: The scope of the variable 'n_out' can be reduced. [variableScope]
+   int i, n_out, ret = 0;
+          ^
+src/components/edge-color-processor.c:68:8: style: The scope of the variable 'i' can be reduced. [variableScope]
+   int i, n_out, ret = 0;
+       ^
+src/components/edge-color-processor.c:68:11: style: The scope of the variable 'n_out' can be reduced. [variableScope]
+   int i, n_out, ret = 0;
+          ^
+src/components/edge-color-processor.c:87:24: style: The scope of the variable 'rgb' can be reduced. [variableScope]
+         unsigned char rgb[3];
+                       ^
+src/components/edge-color-processor.c:88:20: style: The scope of the variable 'x2' can be reduced. [variableScope]
+         int x, y, x2, y2;
+                   ^
+src/components/edge-color-processor.c:88:24: style: The scope of the variable 'y2' can be reduced. [variableScope]
+         int x, y, x2, y2;
+                       ^
+src/components/lpd8806-spidev-sink.c:315:11: warning: Either the condition 'NULL==lpd8806' is redundant or there is possible null pointer dereference: lpd8806. [nullPointerRedundantCheck]
+   memset(lpd8806->led_str, 0, sizeof(int*) * 4);
+          ^
+src/components/lpd8806-spidev-sink.c:319:13: note: Assuming that condition 'NULL==lpd8806' is not redundant
+   if (NULL == lpd8806)
+            ^
+src/components/lpd8806-spidev-sink.c:315:11: note: Null pointer dereference
+   memset(lpd8806->led_str, 0, sizeof(int*) * 4);
+          ^
+src/components/lpd8806-spidev-sink.c:316:4: warning: Either the condition 'NULL==lpd8806' is redundant or there is possible null pointer dereference: lpd8806. [nullPointerRedundantCheck]
+   lpd8806->num_leds = lpd8806->actual_num_leds = 0;
+   ^
+src/components/lpd8806-spidev-sink.c:319:13: note: Assuming that condition 'NULL==lpd8806' is not redundant
+   if (NULL == lpd8806)
+            ^
+src/components/lpd8806-spidev-sink.c:316:4: note: Null pointer dereference
+   lpd8806->num_leds = lpd8806->actual_num_leds = 0;
+   ^
+src/components/lpd8806-spidev-sink.c:61:8: style: The scope of the variable 'idx' can be reduced. [variableScope]
+   int idx = 0, *ptr = NULL;
+       ^
+src/components/lpd8806-spidev-sink.c:184:32: style: The scope of the variable 'i' can be reduced. [variableScope]
+   int ret = -1, *outp = NULL, i, *rgb[] = {&r, &g, &b};
+                               ^
+src/components/lpd8806-spidev-sink.c:496:8: style: The scope of the variable 'i' can be reduced. [variableScope]
+   int i;
+       ^
+src/components/mood-light-processor.c:63:8: style: The scope of the variable 'i' can be reduced. [variableScope]
+   int i, n_out, ret = 0;
+       ^
+src/components/mood-light-processor.c:63:11: style: The scope of the variable 'n_out' can be reduced. [variableScope]
+   int i, n_out, ret = 0;
+          ^
+src/components/mood-light-processor.c:96:8: style: The scope of the variable 'c' can be reduced. [variableScope]
+   int c, ret = 0;
+       ^
+src/components/timer-source.c:73:8: style: The scope of the variable 'c' can be reduced. [variableScope]
+   int c, ret = 0;
+       ^
+src/components/v4l2-grab-source.c:253:8: style: The scope of the variable 'ret' can be reduced. [variableScope]
+   int ret;
+       ^
+src/components/v4l2-grab-source.c:508:8: style: The scope of the variable 'c' can be reduced. [variableScope]
+   int c, ret = 0;
+       ^
+src/components/v4l2-grab-source.c:371:46: portability: 'buffers[buf.index].start' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+         eframe   = buffers[buf.index].start + cy * ebpl + cx * 2;
+                                             ^
+src/components/v4l2-grab-source.c:371:58: portability: 'buffers[buf.index].start+cy*ebpl' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+         eframe   = buffers[buf.index].start + cy * ebpl + cx * 2;
+                                                         ^
+src/gpio.c:75:8: style: Variable 'len' is reassigned a value before the old one has been used. [redundantAssignment]
+   len = snprintf(buf, sizeof(buf), SYSFS_GPIO_BASE  "/gpio%d/edge", num_gpio);
+       ^
+src/gpio.c:58:8: note: len is assigned
+   len = snprintf(buf, sizeof(buf), SYSFS_GPIO_BASE  "/gpio%d/direction", num_gpio);
+       ^
+src/gpio.c:75:8: note: len is overwritten
+   len = snprintf(buf, sizeof(buf), SYSFS_GPIO_BASE  "/gpio%d/edge", num_gpio);
+       ^
+src/gpio.c:92:8: style: Variable 'len' is reassigned a value before the old one has been used. [redundantAssignment]
+   len = snprintf(buf, sizeof(buf), SYSFS_GPIO_BASE "/gpio%d/value", num_gpio);
+       ^
+src/gpio.c:75:8: note: len is assigned
+   len = snprintf(buf, sizeof(buf), SYSFS_GPIO_BASE  "/gpio%d/edge", num_gpio);
+       ^
+src/gpio.c:92:8: note: len is overwritten
+   len = snprintf(buf, sizeof(buf), SYSFS_GPIO_BASE "/gpio%d/value", num_gpio);
+       ^
+src/main.c:286:8: style: The scope of the variable 'c' can be reduced. [variableScope]
+   int c, ret = 0;
+       ^
+src/program.c:151:8: style: The scope of the variable 'ret' can be reduced. [variableScope]
+   int ret;
+       ^
+src/program.c:216:8: style: The scope of the variable 'i' can be reduced. [variableScope]
+   int i, ret = 0;
+       ^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
